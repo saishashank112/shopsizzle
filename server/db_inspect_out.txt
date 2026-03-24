@@ -1,0 +1,39 @@
+=== categories table ===
+  1: "Mobiles" -> 40 products
+  2: "Watches" -> 40 products
+  3: "Dresses" -> 40 products
+  4: "Laptops" -> 40 products
+  5: "Sarees" -> 40 products
+
+=== catalog_categories table ===
+  1: "Electronics" slug="electronics" parent_id=null
+  2: "mobiles" slug="mobiles" parent_id=1
+  4: "Fashion" slug="fashion" parent_id=null
+  5: "Watches" slug="watches" parent_id=null
+  6: "Home & Living" slug="home" parent_id=null
+  7: "Beauty" slug="beauty" parent_id=null
+  8: "Sports & Fitness" slug="sports" parent_id=null
+  9: "Books" slug="books" parent_id=null
+  10: "Smartphones" slug="smartphones" parent_id=1
+  11: "Laptops" slug="laptops" parent_id=1
+  12: "Audio" slug="audio" parent_id=1
+  13: "Cameras" slug="cameras" parent_id=1
+  14: "Smart Home" slug="smart-home" parent_id=1
+  15: "Men's Clothing" slug="mens-clothing" parent_id=4
+  16: "Women's Clothing" slug="womens-clothing" parent_id=4
+  17: "Footwear" slug="footwear" parent_id=4
+  18: "Accessories" slug="accessories" parent_id=4
+
+=== Sample product fields ===
+{
+  "id": 1,
+  "name": "Premium Silk Mobile in gold - Edition 1",
+  "category_id": 1,
+  "brand": "Heritage",
+  "color": "Gold",
+  "material": "Silk",
+  "price": 6906,
+  "discount": 0,
+  "stock": 0,
+  "rating": 4.2
+}

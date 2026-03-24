@@ -1,0 +1,133 @@
+.login-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  background: var(--bg-system);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 3rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  position: relative;
+  z-index: 10;
+  border: 1px solid var(--outline);
+}
+
+.login-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.login-header h1 {
+  font-family: var(--font-hero);
+  font-size: 2.25rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.login-header p {
+  color: var(--on-surface-variant);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--on-surface-variant);
+  transition: color 0.2s;
+}
+
+.styled-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #1f2937;
+  transition: all 0.2s;
+  background: #f8fafc;
+}
+
+.styled-input:focus {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(171, 131, 54, 0.1);
+}
+
+.styled-input:focus + .input-icon {
+  color: var(--primary);
+}
+
+.login-btn {
+  margin-top: 1rem;
+  padding: 1.15rem;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.login-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.toggle-mode {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.toggle-mode:hover {
+  color: var(--primary);
+}
+
+/* Background decorations */
+.bg-shape-1 {
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 600px;
+  height: 600px;
+  background: rgba(171, 131, 54, 0.03);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bg-shape-2 {
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
+  width: 800px;
+  height: 800px;
+  background: rgba(185, 43, 39, 0.02);
+  border-radius: 50%;
+  z-index: 1;
+}

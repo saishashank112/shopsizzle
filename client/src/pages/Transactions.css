@@ -1,0 +1,56 @@
+.txn-root {
+  padding-top: 100px;
+  padding-bottom: 3rem;
+}
+
+.welcome-header {
+  margin-bottom: 2rem;
+}
+
+.welcome-header h1 { font-size: 2rem; font-weight: 900; }
+.welcome-header p { font-size: 0.9rem; opacity: 0.6; }
+
+.luxe-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+}
+
+.luxe-table th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  opacity: 0.5;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.luxe-table td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 0.85rem;
+}
+
+.txn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.txn-badge.success { background: #E8F5E9; color: #2E7D32; }
+.txn-badge.danger { background: #FFEBEE; color: #C62828; }
+.txn-badge.warning { background: #FFF8E1; color: #D84315; }
+
+@media (max-width: 768px) {
+  .txn-root { padding-top: 80px; }
+  .luxe-table th { font-size: 0.6rem; }
+  .luxe-table td { font-size: 0.75rem; padding: 0.75rem; }
+  .txn-badge { font-size: 0.55rem; padding: 2px 4px; }
+}

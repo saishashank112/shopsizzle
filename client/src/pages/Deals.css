@@ -1,0 +1,157 @@
+/* ══════════════════════════════════════════
+   PREMIUM DEALS THEME — Luxe Light
+   A sophisticated design with soft depth,
+   glassmorphism, and anti-gravity balance.
+══════════════════════════════════════════ */
+
+.deals-root-futuristic {
+    background: #f8fafc;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+    color: #0f172a;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Sophisticated Depth Overlays */
+.deals-root-futuristic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: radial-gradient(circle at 50% -10%, rgba(245, 158, 11, 0.08), transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    display: block;
+}
+
+/* Compact Luxe Hero */
+.deals-hero-glitch {
+    padding: 6rem 1rem 3rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.glitch-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #0f172a;
+    letter-spacing: -0.04em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-content-stage p {
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 0.75rem;
+}
+
+/* Refined Container */
+.deals-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* ANTI-GRAVITY Grid (Staggered Column Flow) */
+.cinematic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3.5rem;
+    padding: 2rem 0;
+}
+
+/* Staggered Row Alignment for Anti-Gravity effect */
+.cinematic-grid > *:nth-child(even) {
+    transform: translateY(40px);
+}
+
+/* Loading Stage */
+.deals-loading-stage {
+    text-align: center;
+    padding: 10rem 0;
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.scanning-line {
+    height: 2px;
+    background: #f59e0b;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    width: 60px;
+    margin: 1.5rem auto;
+    animation: move-line 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes move-line {
+    from { transform: translateX(-40px); }
+    to { transform: translateX(40px); }
+}
+
+/* Empty State */
+.no-deals-void {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: #fff;
+    border: 1px solid rgba(241, 245, 249, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+    border-radius: 40px;
+    grid-column: 1 / -1;
+}
+
+.void-icon {
+    color: #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+/* THEME ADAPTATION: Card Overrides */
+.deals-root-futuristic .card-glass-base {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+.deals-root-futuristic .artifact-name-h3 {
+    color: #0f172a !important;
+}
+
+.deals-root-futuristic .current-price-tag {
+    color: #0f172a !important;
+}
+
+.deals-root-futuristic .btn-add-to-vault {
+    background: #0f172a !important;
+    border-radius: 12px !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+    .cinematic-grid {
+        gap: 2rem;
+    }
+    .cinematic-grid > *:nth-child(even) {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .deals-hero-glitch { padding-top: 5rem; }
+    .glitch-title { font-size: 2rem; }
+    .deals-container { padding: 0 1rem; }
+    
+    .cinematic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}

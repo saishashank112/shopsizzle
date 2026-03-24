@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+
+:root {
+  /* System Palette: Clean White + Soft Red + Gold (Indian Premium feel) */
+  --bg-system: #F7f8fa; 
+  --surface-white: #FFFFFF;
+  --primary-obsidian: #424242; /* Ash/Grey Premium Feel */
+  --accent-gold: #D4AF37;     /* Soft Premium Gold */
+  --text-primary: #1F2937;
+  --text-muted: #6B7280;
+  --border-soft: rgba(0,0,0,0.08);
+  --glass-surface: rgba(255, 255, 255, 0.82);
+  --primary: #1F2937;
+  --secondary: #000000;
+  --secondary-dim: #333333;
+  --on-surface-variant: #666666;
+  --outline: #eaeaea;
+  --logo-bg: #fffbf0; /* Light Premium Gold/Cream */
+  --logo-accent: #f59e0b; /* Vibrant Logo Yellow */
+  
+  /* Compact & Tight Design */
+  --shadow-luxe: 0 4px 12px rgba(0,0,0,0.03);
+  --shadow-hover: 0 10px 25px rgba(0,0,0,0.06);
+  
+  --radius-sm: 4px; 
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-system);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* Fixed navbar (72px) + MegaCategoryNav bar (48px) */
+  padding-top: 120px;
+}
+
+/* Pages that have their own top (admin, login, register) get 0 offset */
+body.no-nav-offset {
+  padding-top: 0;
+}
+
+h1, h2, h3, .serif, h4, h5, h6, .price, .amount, .number {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.price, .amount, .number {
+  font-size: 0.95em;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.1rem; }
+  h4 { font-size: 0.95rem; }
+  .product-card-name { font-size: 0.82rem !important; font-weight: 700 !important; }
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+button { cursor: pointer; transition: 0.3s; font-family: inherit; border: none; }
+
+/* Global Modern Button Styles */
+.btn-primary, .btn-action, .btn-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  color: white !important;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+.btn-primary:hover, .btn-action:hover, .btn-add:hover {
+  background: black;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: white;
+  color: var(--primary) !important;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+.btn-secondary:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-luxe);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utils */
+.flex-row { display: flex; align-items: center; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.w-full { width: 100%; }
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Skeleton Loading Animation */
+@keyframes shimmer {
+  0% { background-position: -468px 0; }
+  100% { background-position: 468px 0; }
+}
+.skeleton {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+  animation: shimmer 1s linear infinite forwards;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+  .section-title { font-size: 1.75rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 0.5rem; }
+  .section-title { font-size: 1.5rem; }
+}
